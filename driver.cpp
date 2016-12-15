@@ -9,6 +9,12 @@
 using namespace std;
 
 int main() {
+
+    letterByLetter test;
+
+    //test.getString();
+    //cout << test.sameStringLength(test.str1,test.str2) << endl;
+
     cout << "Hello, World!" << endl;
     return 0;
 }
