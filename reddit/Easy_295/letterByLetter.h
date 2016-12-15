@@ -1,70 +1,71 @@
-#include <iostream>
+    #include <iostream>
+    #include <string>
 
-using namespace std;
+    using namespace std;
 
-class letterByLetter
-{
-private:
-
-    // Strings to hold inputs and output
-    string str1;
-    string str2;
-    string strOut;
-
-    // Sets the input strings and matches output string to the first input
-    void getString()
+    class letterByLetter
     {
-        cout << endl << "Please make sure both strings are the same length." << endl;
-        cout << "Please type in the first string." << endl;
-        getline(cin,str1);
+    private:
 
-        cout << endl << "Please type in the second string." << endl;
-        getline(cin,str2);
+        // Strings to hold inputs and output
+        string str1;
+        string str2;
+        string strOut;
 
-        strOut = str1;
-    }
-
-    // Goes through a loop changing the Output string one letter at a time
-    //  from the str1 to str2 characters using string array notation
-    void changeStrings()
-    {
-        cout << endl << strOut << endl;
-
-        for(int i = 0; i < str1.length(); i++)
+        // Sets the input strings and matches output string to the first input
+        void getString()
         {
-            strOut[i] = str2[i];
+            cout << endl << "Please make sure both strings are the same length." << endl;
+            cout << "Please type in the first string." << endl;
+            getline(cin,str1);
 
-            if(str1[i] != str2[i])
+            cout << endl << "Please type in the second string." << endl;
+            getline(cin,str2);
+
+            strOut = str1;
+        }
+
+        // Goes through a loop changing the Output string one letter at a time
+        //  from the str1 to str2 characters using string array notation
+        void changeStrings()
+        {
+            cout << endl << strOut << endl;
+
+            for(int i = 0; i < str1.length(); i++)
             {
-                cout << strOut << endl;
+                strOut[i] = str2[i];
+
+                if(str1[i] != str2[i])
+                {
+                    cout << strOut << endl;
+                }
             }
         }
-    }
 
-    // true false check to make sure strings are same length
-    bool sameStringLength(string x, string y)
-    {
-        return x.length() == y.length();
-    }
+        // true false check to make sure strings are same length
+        bool sameStringLength(string x, string y)
+        {
+            return x.length() == y.length();
+        }
 
-    // function to set the strings and check that they are same length
-    void setString()
-    {
-        getString();
-
-        while(!sameStringLength(str1,str2))
+        // function to set the strings and check that they are same length
+        void setString()
         {
             getString();
+
+            while(!sameStringLength(str1,str2))
+            {
+                getString();
+            }
         }
-    }
 
-public:
+    public:
 
-    //Constructor to run the program
-    letterByLetter()
-    {
-        setString();
-        changeStrings();
-    }
+        //Constructor to run the program
+        letterByLetter()
+        {
+            setString();
+            changeStrings();
+        }
 
-};
+    };
