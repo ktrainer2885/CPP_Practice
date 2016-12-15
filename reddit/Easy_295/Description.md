@@ -1,5 +1,5 @@
-/*
-  TODO  295 Letter by letter
+# Challenge 295
+----------
 
 Description
 
@@ -59,35 +59,3 @@ braking the dooloor
 braking the dooroor
 braking the door or
 braking the door ir
- */
-
-#include <iostream>
-
-using namespace std;
-
-class letterByLetter
-{
-public:
-    string str1;
-    string str2;
-
-    letterByLetter()
-    {
-
-    }
-
-    string getString()
-    {
-
-    }
-
-    void changeStrings()
-    {
-
-    }
-
-    void display()
-    {
-
-    }
-};
